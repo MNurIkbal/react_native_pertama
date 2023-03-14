@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Image, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import logo from "./acer.jpg";
+import Flexbox from "./Flexbox";
 import SampleComponen from "./SampleComponen";
 
 
@@ -8,8 +9,8 @@ const App = () => {
   return (
     <ScrollView>
       <SampleStyeling />
-      <SampleStyeling />
-      {/* <SampleComponen /> */}
+      <Flexbox/>
+      <SampleComponen />
     </ScrollView>
   );
 }
