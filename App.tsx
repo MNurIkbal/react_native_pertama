@@ -1,30 +1,99 @@
-import React from "react";
-import { Image, Text, TextInput, View } from "react-native";
+import React, { Component } from "react";
+import { Image, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import logo from "./acer.jpg";
+import SampleComponen from "./SampleComponen";
 
 
 const App = () => {
   return (
-    <View style={{width:500,height:500,backgroundColor:'red'}}>
-      <Text>Programmer</Text>
-      <Text>Web developper</Text>
-      <Text>android aplication</Text>
-      <Satu />
-      <Photo />
-      <TextInput style={{borderWidth:1,backgroundColor:'white'}} />
-    </View>
+    <ScrollView>
+      <SampleStyeling />
+      <SampleStyeling />
+      {/* <SampleComponen /> */}
+    </ScrollView>
   );
 }
 
-const Satu = () => {
-  return <Text>function Satu Huruf pertama harus gede</Text>;
-}
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    fontFamily: 'cursive',
+    color: 'blue',
+    // marginLeft: 100,
+    // marginTop: 100,
+    textAlign:'center'
+  },
+  logo: {
+    width: 300,
+    height:200,
+    borderRadius:10
+  },
 
-const Photo = () => {
+  kotak_img: {
+    width:320,
+    // height:220,
+    margin:50,
+    backgroundColor:'#f2f2f2',
+    padding:10,
+    borderRadius:10
+  },
+
+  font_title: {
+    marginTop:16,
+    fontWeight:'bold',
+    fontSize:16,
+    color:'black'
+  },
+
+  price: {
+    marginTop:10,
+    color:'black'
+  },
+
+  beli: {
+    backgroundColor:'green',
+    textAlign:'center',
+    padding:10,
+    borderRadius:10,
+    marginTop:20
+  },
+
+  textbeli: {
+    color:'white',
+    textAlign:'center',
+    fontWeight:'bold'
+  }
+})
+
+const SampleStyeling = () => {
   return (
-    <View style={{backgroundColor:'white'}}>
-      <Image source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/BMW_logo_%28gray%29.svg/2048px-BMW_logo_%28gray%29.svg.png'}} style={{width:100,height:100}} />
+    <View>
+      <Text style={styles.text}>Styling Component</Text>
+      <View style={{
+        width: 200,
+        height: 200,
+        backgroundColor: 'green',
+        borderWidth: 5,
+        borderColor: 'red',
+        marginLeft: 50,
+        marginTop: 50
+      }}>
+
+      </View>
+      <View style={styles.kotak_img}>
+        <Image source={logo} style={styles.logo} />
+        <Text style={styles.font_title}>Laptop Acer Aspire 5</Text>
+        <Text style={styles.price}>Rp 8.500.000.00</Text>
+        <Text style={styles.price}>Jakarta Mampang</Text>
+        <View style={styles.beli}>
+          <Text style={styles.textbeli}>Beli Sekarang</Text>
+        </View>
+      </View>
     </View>
   )
 }
+
+
 
 export default App;
