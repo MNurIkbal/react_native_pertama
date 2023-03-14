@@ -2,15 +2,17 @@ import React, { Component } from "react";
 import { Image, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import logo from "./acer.jpg";
 import Flexbox from "./Flexbox";
+import Position from "./Position";
 import SampleComponen from "./SampleComponen";
 
 
 const App = () => {
   return (
     <ScrollView>
-      <SampleStyeling />
+      {/* <SampleStyeling />
       <Flexbox/>
-      <SampleComponen />
+      <SampleComponen /> */}
+      <Position/>
     </ScrollView>
   );
 }
